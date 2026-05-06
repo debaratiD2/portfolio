@@ -168,7 +168,7 @@ publications: [
     
     {
       title: "ScrapVolt",
-      href: "https://magicui.design",
+      href: "#",
       dates: "Nov 2024 - Jan 2025",
       active: true,
       description:
@@ -182,7 +182,7 @@ publications: [
       links: [
         {
           type: "Website",
-          href: "",//fix later
+          href: "#",//fix later
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -192,10 +192,11 @@ publications: [
         },
       ],
       image: "/s-1.png",
+      video: "",
     },
     {
       title: "Burger-builder",
-      href: "",
+      href: "#",
       dates: "April 2023 - September 2023",
       active: true,
       description:"A full-stack project allowing users to customize burgers and order in real-time. Features include user authentication and a real-time database.",
@@ -208,7 +209,7 @@ publications: [
       links: [
         {
           type: "Website",
-          href: "",
+          href: "#",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -218,7 +219,7 @@ publications: [
         },
       ],
       image: "/logo.png",
-      
+      video: "",
     },
     {
       title: "Essence",
@@ -231,7 +232,9 @@ publications: [
       "Firebase",
       "Dart",
       ],
-      
+      links: [],
+      image: "", 
+      video: "",
       
     },
     {
@@ -246,7 +249,10 @@ publications: [
       "CSS",
       "JavaScript",
     ],
-    links: [],
+    links: [], 
+    image: "", 
+    video: "",
+
   },
   ],
 

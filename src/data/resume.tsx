@@ -37,7 +37,7 @@ const OrcidIcon = ({ className }: { className?: string }) => (
 export const DATA = {
   name: "Debarati Dhar",
   initials: "D",
-  url: "https://dillion.io", //need to change
+  url: "https://github.com/debaratiD2/portfolio.git", //need to change
   location: "Bhatiary, Chattogram-4315, Bangladesh",
   
   description:
@@ -256,7 +256,7 @@ publications: [
     {
       title: "BirdCLEF+ 2026",
       dates: "March 11, 2026 - June 3, 2026",
-      platform: "Kaggle",
+      location: "Kaggle",
       description:
         " to develop machine learning frameworks capable of identifying understudied species within continuous audio data from Brazil's Pantanal wetlands",
       image: 'https://www.kaggle.com/competitions/129329/images/header',

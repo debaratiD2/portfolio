@@ -58,7 +58,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
+            <h2 className="text-xl font-bold">Internship</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <WorkSection />
@@ -130,6 +130,53 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section id="publications">
+  <div className="space-y-12 w-full py-12">
+    {/* Styled Header Section */}
+    <div className="flex flex-col items-center justify-center space-y-4 text-center">
+      <div className="flex items-center justify-center w-full gap-4">
+        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        <div className="border bg-primary z-10 rounded-full px-6 py-1.5 shadow-sm">
+          <span className="text-background text-sm font-medium tracking-tight">Research Work</span>
+        </div>
+        <div className="flex-1 h-px bg-gradient-to-l from-transparent via-border to-transparent" />
+      </div>
+      
+      <div className="space-y-2">
+        <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[600px] mx-auto">
+          Peer-reviewed papers published in international conferences
+        </p>
+      </div>
+    </div>
+
+    {/* Publication Grid */}
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 max-w-[800px] mx-auto px-4">
+      {DATA.publications.map((pub) => (
+        <div key={pub.title} className="group relative rounded-xl border p-5 hover:shadow-md transition-all duration-300 bg-card">
+          <h3 className="font-semibold text-lg leading-snug mb-2 group-hover:text-primary transition-colors">
+            {pub.title}
+          </h3>
+          <p className="text-sm font-medium text-blue-600 mb-1">
+            {pub.conference}, {pub.year}
+          </p>
+          <p className="text-xs text-muted-foreground italic mb-4">
+            {pub.authors}
+          </p>
+          <div className="flex items-center gap-2">
+            <a 
+              href={pub.href} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[10px] uppercase tracking-widest inline-flex items-center rounded-full border px-3 py-1 bg-secondary hover:bg-primary hover:text-background transition-colors"
+            >
+              View Paper / DOI
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       <section id="projects">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <ProjectsSection />

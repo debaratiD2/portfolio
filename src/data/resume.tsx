@@ -1,5 +1,4 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
 import { 
   SiPython, 
   SiC, 
@@ -14,6 +13,7 @@ import {
   SiTypescript,
   SiNodedotjs 
 } from "react-icons/si";
+import { SiSubstack, SiDuolingo } from "react-icons/si";
 import { LuBrainCircuit, LuNetwork } from "react-icons/lu";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
@@ -26,9 +26,10 @@ import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
-import { platform } from "node:os";
+//import { platform } from "node:os";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faOrcid } from "@fortawesome/free-brands-svg-icons";
+import { HomeIcon, NotebookIcon, TrophyIcon } from "lucide-react";
 
 const OrcidIcon = ({ className }: { className?: string }) => (
   <FontAwesomeIcon icon={faOrcid} className={className} />
@@ -37,7 +38,7 @@ const OrcidIcon = ({ className }: { className?: string }) => (
 export const DATA = {
   name: "Debarati Dhar",
   initials: "D",
-  url: "https://github.com/debaratiD2/portfolio.git", //need to change
+  url: "https://portfolio-wwiu.vercel.app", //need to change
   location: "Bhatiary, Chattogram-4315, Bangladesh",
   
   description:
@@ -55,16 +56,21 @@ export const DATA = {
   { name: "CSS", icon: SiCss3 },
   { name: "React", icon: SiReact },
   { name: "Next.js", icon: SiNextdotjs },
+  {name: "TypeScript", icon: SiTypescript},
   { name: "Node.js", icon: SiNodedotjs },
   { name: "MongoDB", icon: SiMongodb },
   // Using Lucide-style icons for ML/DL as they don't have single "brand" logos
   { name: "Machine Learning", icon: LuBrainCircuit }, 
   { name: "Deep Learning", icon: LuNetwork },
+  {name: "Natural Language Processing (NLP)", icon: LuBrainCircuit},
+  {name: "Large Language Models (LLMs)", icon: LuBrainCircuit},
+  
   ],
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
-  ],
+  { href: "/", icon: HomeIcon, label: "Home" },
+  { href: "/blog", icon: NotebookIcon, label: "Blog" },
+  { href: "/achievements", icon: TrophyIcon, label: "Achievements" },
+],
   contact: {
     email: "debaratidhar.dee124@gmail.com",
     tel: "+8801821898023",
@@ -96,6 +102,18 @@ export const DATA = {
 
         navbar: false,
       },
+      // Substack: {
+      //   name: "Substack",
+      //   url: "https://substack.com/@trulydebarati",   // replace
+      //   icon: SiSubstack,
+      //   navbar: true,
+      // },
+      Duolingo: {
+        name: "Duolingo",
+        url: "https://www.duolingo.com/profile/DEBARATI_d2",   // replace
+        icon: SiDuolingo,
+        navbar: true,
+      },
     },
   },
 
@@ -110,7 +128,7 @@ export const DATA = {
       start: "Dec 2024",
       end: "Jan 2025",
       description:
-        "Developed a telemedicine platform using HTML, SQL, Laravel.",
+        "Collaborated on the architecture and full-stack development of TeleCure, a secure, role-based telemedicine application, and optimized the relational database pipeline for secure, low-latency handling of patient records.",
     },
     
     
@@ -150,7 +168,19 @@ publications: [
       authors: "First Author",
       doi: "10.1109/CSITSS67709.2025.11294091",
       href: "https://doi.org/10.1109/CSITSS67709.2025.11294091",
+      pdf: "/papers/csitss-2025-neurodevelopmental.pdf",
       image: "/csitss.png", // Optional: Add a thumbnail image in your public folder
+    },
+    {
+      title: "Cattle Infectious Disease Prediction Using Machine Learning Model and Explainable AI",
+      conference: "7th International Conference on Electrical Information and Communication Technology (EICT)",
+      year: "2025",
+      authors: "Co-author",
+      doi: "10.1109/eict68394.2025.11355591",
+      href: "https://doi.org/10.1109/EICT68394.2025.11355591",
+      //pdf: "/papers/eict-2025-cattle-disease.pdf",
+      pdf:"#",
+      image: "/heartland.png",
     },
     {
       title: "Heartland: A Kidney, Liver, Heart Disease Patient Assistance Smartphone Application With Disease Detection, Treatment, Physician Suggestion Features",
@@ -159,12 +189,44 @@ publications: [
       authors: "Co-author",
       doi: "10.1109/ICTEST64710.2025.11042534",
       href: "https://doi.org/10.1109/ICTEST64710.2025.11042534",
+      //pdf: "/papers/ictest-2025-heartland.pdf",
+      pdf:"#",
       image: "/heartland.png", // Optional
     },
+    
   ],
 
 
   projects: [
+    {
+      title: "Emotion Classification with BiGRU + FastAPI",
+      href: "https://analyzing-sentiments-using-fastapi-1.onrender.com/",
+      dates: "July 2026 - Aug 2026",
+      active: true,
+      description:
+        "End-to-end sentiment classification pipeline using BiGRU, TensorFlow and FastAPI, trained on the Hugging Face Emotion dataset",
+      technologies: [
+        "python3",
+        "fastapi",
+        "biGRU",
+      "HTML",
+       
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://analyzing-sentiments-using-fastapi-1.onrender.com/",//fix later
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/debaratiD2/emotion-classification-BiGRU-FastAPI/",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQalCL1LQvQ_iiJQM9SPY6jwhbZz7Fjc2jD9MRRZIFnTiZTk1GZ",
+      video: "",
+    },
     
     {
       title: "ScrapVolt",
@@ -180,18 +242,18 @@ publications: [
       "ASP.NET Core",
       ],
       links: [
-        {
-          type: "Website",
-          href: "#",//fix later
-          icon: <Icons.globe className="size-3" />,
-        },
+        // {
+        //   type: "Website",
+        //   href: "#",//fix later
+        //   icon: <Icons.globe className="size-3" />,
+        // },
         {
           type: "Source",
           href: "https://github.com/debaratiD2/scrapvoltnewrepo",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/s-1.png",
+      image: "/scrapvolt.png",
       video: "",
     },
     {
@@ -207,11 +269,11 @@ publications: [
       "Redux",
       ],
       links: [
-        {
-          type: "Website",
-          href: "#",
-          icon: <Icons.globe className="size-3" />,
-        },
+        // {
+        //   type: "Website",
+        //   href: "#t",
+        //   icon: <Icons.globe className="size-3" />,
+        // },
         {
           type: "Source",
           href: "https://github.com/dEEdebarati/burgerbuilderusingreactrepo",
@@ -233,7 +295,7 @@ publications: [
       "Dart",
       ],
       links: [],
-      image: "", 
+      image: "/essence.jpeg", 
       video: "",
       
     },
@@ -250,7 +312,7 @@ publications: [
       "JavaScript",
     ],
     links: [], 
-    image: "", 
+    image: "/euphoria.jpeg", 
     video: "",
 
   },
@@ -259,41 +321,116 @@ publications: [
 
 
   hackathons: [
-    {
-      title: "BirdCLEF+ 2026",
-      dates: "March 11, 2026 - June 3, 2026",
-      location: "Kaggle",
-      description:
-        " to develop machine learning frameworks capable of identifying understudied species within continuous audio data from Brazil's Pantanal wetlands",
-      image: 'https://www.kaggle.com/competitions/129329/images/header',
-      links: [
-        {
-          title: "Cornell Lab of Ornithology",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/ethdocnet", //change later
-        },
-      ],
-    },
+    // {
+    //   title: "BirdCLEF+ 2026",
+    //   dates: "March 11, 2026 - June 3, 2026",
+    //   location: "Kaggle",
+    //   description:
+    //     " to develop machine learning frameworks capable of identifying understudied species within continuous audio data from Brazil's Pantanal wetlands",
+    //   image: 'https://www.kaggle.com/competitions/129329/images/thumbnail',
+    //   links: [
+    //     {
+    //       title: "Cornell Lab of Ornithology",
+    //       icon: <Icons.github className="h-4 w-4" />,
+    //       href: "https://github.com/ethdocnet", //change later
+    //     },
+    //   ],
+    // },
     
     
    
     
     
-    // {
-    //   title: "Portal Hackathon",
-    //   dates: "October 29, 2016",
-    //   location: "Kingston, Ontario",
-    //   description:
-    //     "Developed an internal widget for uploading assignments using Waterloo's portal app",
-    //   image:
-    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png",
-    //   links: [
-    //     {
-    //       title: "Source",
-    //       icon: <Icons.github className="h-4 w-4" />,
-    //       href: "https://github.com/UWPortalSDK/crowmark",
-    //     },
-    //   ],
-    // },
+    {
+      title: "CALL-E: Your Code Is Calling",
+      dates: "July 23, 2026 - September 14, 2026",
+      location: "online",
+      description:
+        "developed an AI-powered supplier calling platform named, CallForge AI that automates phone conversations, asks custom questions about pricing, stock, warranties, delivery and terms, then turns each call into structured results for quick comparison and decisions.",
+      team: "Team of 2",
+      image:
+        "https://www.heycall-e.com/wp-content/uploads/2026/04/logo-CALL-E.svg",
+      links: [
+        {
+          title: "live app",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://call-forge-ai.vercel.app/",
+          details: "https://github.com/fayyazsarah07/Call-Forge-AI"
+        },
+      ],
+    },
   ],
+  certifications: [
+  {
+    title: "Deep Learning, NLP, and AI Applications",
+    issuer: "Packt",
+    date: "Jul 2026",
+    credentialId: "K1HJU02I3I0J",
+    credentialUrl: "",              // paste the "Show credential" URL
+    pdf: "/certificates/packt-deep-learning-nlp.pdf",
+    logo: "logo/packt_publishing_logo.jpeg",
+  },
+  {
+    title: "Foundations of Cybersecurity",
+    issuer: "Google",
+    date: "Jul 2026",
+    credentialId: "4AE1KZDWFWNS",
+    credentialUrl: "",              // paste the "Show credential" URL
+    pdf: "/certificates/google-cybersecurity.pdf",
+    logo: "logo/google.png",
+  },
+  {
+    title: "Python Logic & Flow",
+    issuer: "Coddy",
+    date: "Jun 2026",
+    credentialId: "u57Toc-python-C8r1xh",
+    credentialUrl: "",
+    pdf: "/certificates/python-coddy.pdf",
+    logo: "https://coddy.tech/images/press/logo-icon-512.png",
+  },
+  {
+    title: "Analyzing Data with Power BI",
+    issuer: "Analytics Vidhya",
+    date: "Jun 2025",
+    credentialId: "bd6vft8usm",
+    credentialUrl: "",
+    pdf: "/certificates/powerbi-analytics-vidhya.pdf",
+    logo: "https://imgcdn.analyticsvidhya.com/dhs2025/AV_logo_hires.png",
+  },
+  {
+    title: "Front-End Development (React/NodeJS/VueJS/AngularJS), EDGE Project",
+    issuer: "Bangladesh Computer Council",
+    date: "Sep 2024 - Dec 2024",
+    credentialId: "",
+    credentialUrl: "",
+    pdf: "/certificates/certificate_EDGE.pdf",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DglIjUVmrmmdpEBRiZXKGpma2GfX11k3aAe03SOth3Tz5d8mcC_pTqg&s=10",
+  },
+],
+
+awards: [
+  {
+    title: "Technical Scholarship",
+    description: "Awarded for 6 consecutive semesters for consistent academic excellence, Dept. of CSE, CUET.",
+  },
+],
+
+activities: [
+  
+  { role: "Session Co-ordinator (Volunteer)", org: "ECCE-25", date: "Feb 2025" },
+  { role: "Office Secretary", org: "CUET Computer Club", date: "2020 - 2025" },
+  { role: "Member", org: "IEEE CUET Student Branch", date: "2023 - 2025" },
+],
+
+learning: [
+  {
+    name: "Japanese",
+    platform: "Duolingo",
+    stat: " 11 / 18139 XP",     // e.g. "Section 2, Unit 5" or "1,250 XP"
+    streak: "392",          // optional
+    href: "https://www.duolingo.com/profile/DEBARATI_d2",
+  },
+],
 } as const;
+
+//src/app/achievements/page.tsx
